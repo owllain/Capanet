@@ -5,15 +5,19 @@ import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
 ---
 
-<Layout title="Portfolio Enrique Cascante.">
+<Layout
+	title="Portfolio de Enrique Cascante — Desarrollador FullStack"
+	description="Contrata a Enrique para desarrollar aplicaciones FullStack y brindar soluciones unicas."
+>
 	<main>
 		<!--Primera sección de información-->
 		<section class="w-full mx-auto lg:w-[740px] py-44">
 			<!--Logo-photo-->
 			<img
-				class="rounded-full h-12 w-12 mb-4"
+				class="rounded-full size-12 mb-4"
 				src="/Logo.jpg"
 				alt="portfolio logo"
 			/>
@@ -46,12 +50,17 @@ import GitHubIcon from "../components/icons/GitHub.astro";
 				<SocialPill
 					href="https://www.linkedin.com/in/enrique-cascante/"
 				>
-					<LinkedInIcon class="w-6 h-6" />
+					<LinkedInIcon class="size-6" />
 					LinkedIn
 				</SocialPill>
+
 				<SocialPill href="https://github.com/owllain">
-					<GitHubIcon class="w-6 h-6" />
+					<GitHubIcon class="size-6" />
 					Github
+				</SocialPill>
+				<SocialPill href="https://github.com/owllain">
+					<MailIcon class="size-6" />
+					alvaro.cascante@uned.cr
 				</SocialPill>
 			</nav>
 		</section>
