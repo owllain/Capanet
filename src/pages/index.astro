@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+---
+
+<Layout title="Portfolio Enrique Cascante.">
+	<main>
+		<!--Primera sección de información-->
+		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<!--Logo-photo-->
+			<img
+				class="rounded-full h-12 w-12 mb-4"
+				src="/Logo.jpg"
+				alt="portfolio logo"
+			/>
+
+			<h1
+				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
+			>
+				Hey soy Enrique <a
+					href="https://www.linkedin.com/in/enrique-cascante/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<!--Segunda sección de información-->
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span>Programador Junior Full Stack.</span>
+				<span class="text-yellow-200 90"
+					>tres años de experiencia freelancer y otras cosas más.</span
+				>
+				<span class="opacity-75"
+					>De Costa Rica, me especializo en en crear soluciones
+					unicas. 📸</span
+				>
+			</h2>
+
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill
+					href="https://www.linkedin.com/in/enrique-cascante/"
+				>
+					<LinkedInIcon class="w-6 h-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/owllain">
+					<GitHubIcon class="w-6 h-6" />
+					Github
+				</SocialPill>
+			</nav>
+		</section>
+	</main>
+</Layout>

@@ -1,0 +1,5 @@
+https://bg.ibelick.com background-gradient
+https://flowbite.com/docs/components/badge/ badges
+https://fontsource.org/fonts/onest/install fonts
+https://svgl.vercel.app/directory/software icons
+https://tablericons.com iconsv2
