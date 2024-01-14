@@ -1,11 +1,19 @@
 ---
+//Imports
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+
+//Icons
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import ProfileIcon from "../components/icons/Profile.astro";
 ---
 
 <Layout
@@ -14,24 +22,20 @@ import MailIcon from "../components/icons/Mail.astro";
 >
 	<main>
 		<!--Primera sección de información-->
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+		<SectionContainer class="py-44 pb-21">
 			<!--Logo-photo-->
-			<img
-				class="rounded-full size-12 mb-4"
-				src="/Logo.jpg"
-				alt="portfolio logo"
-			/>
 
 			<h1
 				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
 			>
-				Hey soy Enrique <a
+				<ProfileIcon />
+				<a
 					href="https://www.linkedin.com/in/enrique-cascante/"
 					target="_blank"
 					rel="noopener"
 					class="flex justify-center items-center"
 				>
-					<Badge>Disponible para trabajar</Badge>
+					<!-- <Badge>Disponible para trabajar</Badge> -->
 				</a>
 			</h1>
 			<!--Segunda sección de información-->
@@ -45,7 +49,7 @@ import MailIcon from "../components/icons/Mail.astro";
 					unicas. 📸</span
 				>
 			</h2>
-
+			<!--Tercera sección de información (Badges) -->
 			<nav class="flex gap-x-4 mt-8">
 				<SocialPill
 					href="https://www.linkedin.com/in/enrique-cascante/"
@@ -63,6 +67,15 @@ import MailIcon from "../components/icons/Mail.astro";
 					alvaro.cascante@uned.cr
 				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<!--Cuarta sección de información con exp. Laboral-->
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
