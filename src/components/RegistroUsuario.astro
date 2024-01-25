@@ -63,9 +63,6 @@ astro: true
         </div>
       </div>
       <div class="flex justify-between mt-4 sm:mt-6">
-        <button type="button" id="clear-form" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white bg-red-500 rounded-lg focus:ring-4 focus:ring-red-200 dark:focus:ring-red-900 hover:bg-red-600">
-          Limpiar
-      </button>
         <button type="submit" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-500 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-600">
             Aceptar
         </button>
@@ -75,15 +72,4 @@ astro: true
   </div>
 </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const userRegistrationForm = document.getElementById("user-registration-form");
-      const clearFormButton = document.getElementById("clear-form");
-
-      // Event listener for the "Limpiar" button
-      clearFormButton.addEventListener("click", function () {
-          // Reset the form fields
-          userRegistrationForm.reset();
-      });
-  });
-</script>
+ 
