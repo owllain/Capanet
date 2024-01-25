@@ -1,0 +1,68 @@
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+        <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Registro de Gestión</h2>
+        <form action="#" id="management-form" class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+            <div>
+                <label for="gestion-number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número de Gestión:</label>
+                <input type="text" name="gestion-number" id="gestion-number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Número de Gestión" readonly>
+              </div>
+            <div class="sm:col-span-2">
+                <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fecha de Ingreso</label>
+                <input type="date" name="date" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required="">
+            </div>
+            <div>
+                <label for="security-level" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nivel de Seguridad</label>
+                <select id="security-level" name="security-level" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required="">
+                    <option value="1">Opción 1</option>
+                    <option value="2">Opción 2</option>
+                    <option value="3">Opción 3</option>
+                </select>
+            </div>
+            <div class="w-full">
+                <label for="issue" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Problema Identificado</label>
+                <textarea id="issue" name="issue" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Describa el problema identificado" required=""></textarea>
+            </div>
+            <div class="sm:col-span-2">
+                <label for="solution" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Solución</label>
+                <textarea id="solution" name="solution" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Describa la solución" required=""></textarea>
+            </div>
+            
+              <div class="sm:col-span-2 flex justify-between items-center">
+                <button type="submit" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-500 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-600">
+                    Aceptar
+                </button>
+                <button type="button" id="clear-form" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white bg-red-500 rounded-lg focus:ring-4 focus:ring-red-200 dark:focus:ring-red-900 hover:bg-red-600">
+                    Limpiar
+                </button>
+                <button type="button" id="generate-number-button" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white bg-green-500 rounded-lg focus:ring-4 focus:ring-green-200 dark:focus:ring-green-900 hover:bg-green-600">
+                    Generar Número de Gestión
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Function to generate a random management number
+        function generateRandomNumber() {
+            return Math.floor(Math.random() * 1000000) + 1; // Change the range as needed
+        }
+
+        // Function to set the generated number in the "Número de Gestión" input field
+        function setRandomNumber() {
+            const gestionNumberInput = document.getElementById("gestion-number");
+            gestionNumberInput.value = generateRandomNumber();
+        }
+
+        // Event listener for the "Limpiar" button
+        const clearFormButton = document.getElementById("clear-form");
+        clearFormButton.addEventListener("click", function () {
+            // Reset the form fields
+            managementForm.reset();
+        });
+
+        // Event listener for the "Generar Número de Gestión" button
+        const generateNumberButton = document.getElementById("generate-number-button");
+        generateNumberButton.addEventListener("click", setRandomNumber);
+    });
+</script>

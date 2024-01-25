@@ -1,0 +1,64 @@
+<h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">¿Necesitas más información?</h1>
+<div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+    <h2 id="accordion-flush-heading-1">
+      <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+        <span>¿Qué es Capa.net?</span>
+        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+      <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">Capa.net es una página web para recopilar herramientas prácticas que puedan usar los capacitadores, de fácil acceso, para brindar una enseñanza más allá de la expectativa.</p>
+      </div>
+    </div>
+    <h2 id="accordion-flush-heading-2">
+      <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+        <span>¿Cómo contribuir?</span>
+        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+      <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">Capa.net es un proyecto de código abierto, por lo cual su licencia es de libre uso y cualquiera puede descargar, modificar y utilizar su código sin necesidad de adquirir una licencia. Todos los recursos usados son de carácter gratuito y originarios de las librerías de los componentes utilizados.</p>
+        <p class="mb-2 text-gray-500 dark:text-gray-400">Stack empleado: Tailwind, Astro, CSS, HTML, JavaScript.</p>
+        <p class="mb-2 text-gray-500 dark:text-gray-400">Backend: en progreso.</p>
+        <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Repositorio: <a href="URL_DE_TU_REPOSITORIO" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-500 hover:underline">GitHub</a>
+          </p>          
+      </div>
+    </div>
+    <h2 id="accordion-flush-heading-3">
+      <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+        <span>Privacidad</span>
+        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+        </svg>
+      </button>
+    </h2>
+    <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+      <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500 dark:text-gray-400">La información utilizada en los formularios no se respalda en la caché ni tampoco en ninguna base de datos, por lo que aunque la información sea de origen ficticio, su privacidad se garantiza al declararse la no recopilación de información por parte del usuario.</p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const accordions = document.querySelectorAll('[data-accordion="collapse"] [data-accordion-target]');
+  
+      accordions.forEach((accordion) => {
+        accordion.addEventListener("click", function () {
+          const target = document.querySelector(this.getAttribute("data-accordion-target"));
+          const expanded = this.getAttribute("aria-expanded") === "true" || false;
+  
+          target.classList.toggle("hidden", expanded);
+          this.setAttribute("aria-expanded", !expanded);
+        });
+      });
+    });
+  </script>
+  

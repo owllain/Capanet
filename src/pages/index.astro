@@ -1,81 +1,43 @@
 ---
-//Imports
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Badge from "../components/Badge.astro";
-import SocialPill from "../components/SocialPill.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Experience from "../components/Experience.astro";
-import ExperienceItem from "../components/ExperienceItem.astro";
-
-//Icons
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
-import Briefcase from "../components/icons/Briefcase.astro";
-import ProfileIcon from "../components/icons/Profile.astro";
+import SectionContainer from "../components/SectionContainer.astro"
+import RegistroUsuario from "../components/RegistroUsuario.astro";
+import RegistroSolicitud from "../components/RegistroSolicitud.astro";
+import RegistroGestion from "../components/RegistroGestion.astro";
+import Intro from "../components/Intro.astro";
+import Acordeon from "../components/Acordeon.astro";
+import Back from "../components/Back.astro";
 ---
 
 <Layout
-	title="Portfolio de Enrique Cascante — Desarrollador FullStack"
-	description="Contrata a Enrique para desarrollar aplicaciones FullStack y brindar soluciones unicas."
+	title="Capanet"
+	description="Proyecto SPA para herramientas de capacitación."
 >
-	<main>
-		<!--Primera sección de información-->
-		<SectionContainer class="py-44 pb-21">
-			<!--Logo-photo-->
-
-			<h1
-				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
-			>
-				<ProfileIcon />
-				<a
-					href="https://www.linkedin.com/in/enrique-cascante/"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<!-- <Badge>Disponible para trabajar</Badge> -->
-				</a>
-			</h1>
-			<!--Segunda sección de información-->
-			<h2 class="text-2xl opacity-80 text-wrap">
-				<span>Programador Junior Full Stack.</span>
-				<span class="text-yellow-200 90"
-					>tres años de experiencia freelancer y otras cosas más.</span
-				>
-				<span class="opacity-75"
-					>De Costa Rica, me especializo en en crear soluciones
-					unicas. 📸</span
-				>
-			</h2>
-			<!--Tercera sección de información (Badges) -->
-			<nav class="flex gap-x-4 mt-8">
-				<SocialPill
-					href="https://www.linkedin.com/in/enrique-cascante/"
-				>
-					<LinkedInIcon class="size-6" />
-					LinkedIn
-				</SocialPill>
-
-				<SocialPill href="https://github.com/owllain">
-					<GitHubIcon class="size-6" />
-					Github
-				</SocialPill>
-				<SocialPill href="https://github.com/owllain">
-					<MailIcon class="size-6" />
-					alvaro.cascante@uned.cr
-				</SocialPill>
-			</nav>
+	<main class="px-4">
+	 
+		<SectionContainer class="py-44 pb-32 animate-fade-right animate-once" id="inicio">
+			 <Intro></Intro>
 		</SectionContainer>
 
-		<SectionContainer id="experiencia">
-			<!--Cuarta sección de información con exp. Laboral-->
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Briefcase class="size-7" />
-				Experiencia Laboral
-			</h2>
-			<Experience />
+		<SectionContainer id="registro">
+			<RegistroUsuario></RegistroUsuario>
 		</SectionContainer>
+
+		<SectionContainer id="solicitud">
+			<RegistroSolicitud></RegistroSolicitud>
+		</SectionContainer>
+
+		<SectionContainer id="gestion">
+			 
+		</SectionContainer>
+
+		<SectionContainer id="mas-informacion">
+			<Acordeon>	</Acordeon>
+		</SectionContainer>
+
+		<SectionContainer>
+			<Back>	</Back>
+		</SectionContainer>
+		 
 	</main>
 </Layout>
