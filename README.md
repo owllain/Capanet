@@ -1,8 +1,6 @@
 
 # Proyecto Capa.net
 
-![Logo del Proyecto](enlace a tu logo o imagen representativa)
-
 ## Descripción
 
 Un proyecto para subir herramientas para capacitadores.
